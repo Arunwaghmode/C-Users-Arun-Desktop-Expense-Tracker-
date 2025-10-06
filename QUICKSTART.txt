@@ -1,0 +1,118 @@
+═══════════════════════════════════════════════════════════════
+    💰 EXPENSE TRACKER - QUICK START
+═══════════════════════════════════════════════════════════════
+
+📋 PREREQUISITES:
+   • Node.js 16+ installed
+   • OpenAI API key (get at: https://platform.openai.com/api-keys)
+
+═══════════════════════════════════════════════════════════════
+
+🚀 SETUP (First Time Only):
+
+1. Install all dependencies:
+   npm run install:all
+
+2. Create backend/.env file with:
+   OPENAI_API_KEY=sk-your-key-here
+   PORT=3000
+   NODE_ENV=development
+
+═══════════════════════════════════════════════════════════════
+
+▶️  RUN THE APP:
+
+Terminal 1 (Backend):
+   cd backend
+   npm run dev
+
+Terminal 2 (Frontend):
+   cd frontend
+   npm run dev
+
+Then open: http://localhost:5173
+
+═══════════════════════════════════════════════════════════════
+
+✅ VERIFY IT'S WORKING:
+
+Backend running:
+   ✓ See "🚀 Expense Tracker server running on port 3000"
+   ✓ Test: http://localhost:3000/api/health
+
+Frontend running:
+   ✓ See "Local: http://localhost:5173/"
+   ✓ Open in browser, should see upload zone
+
+Test upload:
+   ✓ Drag receipt image to upload zone
+   ✓ Click "Extract Data"
+   ✓ Should see merchant, amount, date in ~5-10 seconds
+
+═══════════════════════════════════════════════════════════════
+
+🎯 QUICK TEST:
+
+1. Upload any receipt image (JPG, PNG, WebP)
+2. Wait for extraction
+3. Click "Save"
+4. Refresh page - expense should still be there (localStorage!)
+
+═══════════════════════════════════════════════════════════════
+
+📁 PROJECT STRUCTURE:
+
+expense-tracker/
+├── backend/          → Express + OpenAI API
+├── frontend/         → React app
+├── README.md         → Full documentation
+├── SETUP.md          → Detailed setup guide
+└── package.json      → Helper scripts
+
+═══════════════════════════════════════════════════════════════
+
+🛠 USEFUL COMMANDS:
+
+Install everything:
+   npm run install:all
+
+Run backend only:
+   npm run dev:backend
+
+Run frontend only:
+   npm run dev:frontend
+
+Build for production:
+   npm run build
+
+═══════════════════════════════════════════════════════════════
+
+❓ TROUBLESHOOTING:
+
+"API key not configured"
+   → Create backend/.env with OPENAI_API_KEY
+
+"Port 3000 in use"
+   → Change PORT in backend/.env
+
+"Failed to extract"
+   → Check API key is valid
+   → Try clearer receipt image
+   → Check backend logs
+
+═══════════════════════════════════════════════════════════════
+
+📚 MORE HELP:
+
+- Full docs: README.md
+- Setup guide: SETUP.md
+- MVP scope: mvp.md
+- Design spec: design.md
+
+═══════════════════════════════════════════════════════════════
+
+Happy expense tracking! 🎉
+
+
+
+

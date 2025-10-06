@@ -1,0 +1,182 @@
+.expense-list {
+  margin-top: 48px;
+}
+
+.expense-list h2 {
+  font-size: 24px;
+  color: #1F2937;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.expense-list.empty {
+  margin-top: 32px;
+}
+
+.empty-state {
+  background: white;
+  border: 2px dashed #D1D5DB;
+  border-radius: 12px;
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 20px;
+  color: #1F2937;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #6B7280;
+}
+
+/* Expense Cards */
+.expense-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expense-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.expense-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #3B82F6;
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.expense-merchant {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.merchant-icon {
+  font-size: 20px;
+}
+
+.merchant-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.expense-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3B82F6;
+}
+
+.expense-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 16px;
+}
+
+.date-icon {
+  font-size: 16px;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.btn-view,
+.btn-delete {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-view {
+  background: #EFF6FF;
+  color: #3B82F6;
+}
+
+.btn-view:hover {
+  background: #DBEAFE;
+  color: #2563EB;
+}
+
+.btn-delete {
+  background: #FEF2F2;
+  color: #EF4444;
+}
+
+.btn-delete:hover {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .expense-list h2 {
+    font-size: 20px;
+  }
+
+  .expense-card {
+    padding: 16px;
+  }
+
+  .expense-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .merchant-name {
+    font-size: 16px;
+  }
+
+  .expense-amount {
+    font-size: 18px;
+  }
+
+  .expense-actions {
+    flex-direction: column;
+  }
+
+  .btn-view,
+  .btn-delete {
+    width: 100%;
+  }
+}
+
+
+
+
