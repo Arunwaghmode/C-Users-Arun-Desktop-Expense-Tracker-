@@ -36,10 +36,14 @@ function App() {
       const formData = new FormData();
       formData.append('receipt', file);
 
-      // Call backend API (works in dev and production)
-      const API_URL = import.meta.env.DEV 
-        ? 'http://localhost:3000/api/extract'
-        : '/api/extract';
+      // Call backend API (configurable for different deployments)
+      // VITE_API_URL can be set for custom backend (e.g., separate Render backend)
+      // Otherwise, defaults to localhost in dev and relative path in production
+      const API_URL = import.meta.env.VITE_API_URL 
+        ? `${import.meta.env.VITE_API_URL}/api/extract`
+        : (import.meta.env.DEV 
+          ? 'http://localhost:3000/api/extract'
+          : '/api/extract');
       
       const response = await fetch(API_URL, {
         method: 'POST',

@@ -1,0 +1,15 @@
+[build]
+builder = "nixpacks"
+
+[build.nixpacksConfig]
+# Install all dependencies
+installCmd = "cd backend && npm install && cd ../frontend && npm install"
+# Build the frontend
+buildCmd = "cd frontend && npm run build"
+
+[deploy]
+# Start the backend (which serves the frontend build)
+startCommand = "cd backend && npm start"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
